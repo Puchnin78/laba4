@@ -38,7 +38,7 @@ int main()
 
         if (num != 0)
         {
-            f_output.open("R.txt" );
+            f_output.open("R.txt", ios::app);
 
             if (!f_output.is_open())
             {
@@ -57,7 +57,7 @@ int main()
         }
     } while (num != 0);
 
-    f_input.open("R.txt");
+    f_input.open("R.txt", ios::app);
 
     if (!f_input.is_open())
     {
@@ -69,10 +69,13 @@ int main()
         while (f_input >> numberInTheFile)
         {
             
-            result << number(numberInTheFile) << endl;
+            if (number(numberInTheFile) == 2) {
+                count++;
+            }
+                
                    
         }
-       result << "Общие количество простых чисел в последовательности равно: " << count;
+       result << "amount of prime numbers: " << count;
        f_input.close();
     }
     return 0;
