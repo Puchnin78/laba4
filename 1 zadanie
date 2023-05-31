@@ -57,7 +57,7 @@ int main()
         }
     } while (num != 0);
 
-    f_input.open("R.txt", ios_base::app);
+    f_input.open("R.txt");
 
     if (!f_input.is_open())
     {
