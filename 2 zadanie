@@ -59,7 +59,7 @@ int main()
 
 	} while (number != 0);
 
-	f_input.open("number.txt", std::ios_base::in);
+	f_input.open("number.txt");
 
 	if (!f_input.is_open())
 	{
